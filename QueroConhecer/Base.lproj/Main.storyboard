@@ -197,6 +197,10 @@ por 2 segundos.</string>
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" name="main"/>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="O7X-kR-5zC">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="h1a-nO-Jdy">
                                 <rect key="frame" x="10" y="150" width="394" height="702"/>
                                 <subviews>
@@ -207,8 +211,11 @@ por 2 segundos.</string>
                                         </constraints>
                                         <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="1AD-9T-FKR" id="nWi-tQ-JLm"/>
+                                        </connections>
                                     </searchBar>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A7j-8x-owX">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="A7j-8x-owX">
                                         <rect key="frame" x="0.0" y="50" width="394" height="486"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adk-Sb-RcO">
@@ -256,7 +263,9 @@ por 2 segundos.</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fjc-7m-KbI" firstAttribute="trailing" secondItem="h1a-nO-Jdy" secondAttribute="trailing" constant="10" id="2Qc-vv-sg9"/>
+                            <constraint firstItem="O7X-kR-5zC" firstAttribute="centerY" secondItem="IIE-Dx-iKo" secondAttribute="centerY" id="C8q-ic-IHk"/>
                             <constraint firstItem="h1a-nO-Jdy" firstAttribute="top" secondItem="fjc-7m-KbI" secondAttribute="top" constant="10" id="TUR-cW-7Cl"/>
+                            <constraint firstItem="O7X-kR-5zC" firstAttribute="centerX" secondItem="IIE-Dx-iKo" secondAttribute="centerX" id="guN-8G-6I4"/>
                             <constraint firstItem="h1a-nO-Jdy" firstAttribute="leading" secondItem="fjc-7m-KbI" secondAttribute="leading" constant="10" id="jcU-Wq-uEL"/>
                             <constraint firstItem="KFv-Gs-Xkc" firstAttribute="top" secondItem="fjc-7m-KbI" secondAttribute="top" id="mBg-bZ-8zL"/>
                             <constraint firstItem="fjc-7m-KbI" firstAttribute="bottom" secondItem="KFv-Gs-Xkc" secondAttribute="bottom" id="ohX-pN-O2Q"/>
@@ -277,6 +286,7 @@ por 2 segundos.</string>
                     <connections>
                         <outlet property="lbAdress" destination="Qyi-J1-DNx" id="BaT-Mj-fHf"/>
                         <outlet property="lbName" destination="3J1-fB-P6L" id="Rpu-zL-o41"/>
+                        <outlet property="loading" destination="O7X-kR-5zC" id="Wk9-ib-Xls"/>
                         <outlet property="mapView" destination="A7j-8x-owX" id="5Cy-Cp-WS9"/>
                         <outlet property="searchBar" destination="His-Js-GOt" id="xiN-3I-Mum"/>
                         <outlet property="viInfo" destination="adk-Sb-RcO" id="EWb-Af-KRD"/>
