@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D0C5B84A2610DE9D007EC3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5B8492610DE9D007EC3D4 /* AppDelegate.swift */; };
 		D0C5B84C2610DE9D007EC3D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5B84B2610DE9D007EC3D4 /* SceneDelegate.swift */; };
-		D0C5B84E2610DE9D007EC3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5B84D2610DE9D007EC3D4 /* ViewController.swift */; };
 		D0C5B8512610DE9D007EC3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C5B84F2610DE9D007EC3D4 /* Main.storyboard */; };
 		D0C5B8532610DEA1007EC3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C5B8522610DEA1007EC3D4 /* Assets.xcassets */; };
 		D0C5B8562610DEA1007EC3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C5B8542610DEA1007EC3D4 /* LaunchScreen.storyboard */; };
@@ -43,7 +42,6 @@
 		D0C5B8462610DE9D007EC3D4 /* QueroConhecer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueroConhecer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C5B8492610DE9D007EC3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C5B84B2610DE9D007EC3D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0C5B84D2610DE9D007EC3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0C5B8502610DE9D007EC3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0C5B8522610DEA1007EC3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0C5B8552610DEA1007EC3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,16 +109,11 @@
 			children = (
 				D0C5B8492610DE9D007EC3D4 /* AppDelegate.swift */,
 				D0C5B84B2610DE9D007EC3D4 /* SceneDelegate.swift */,
-				D0C5B84D2610DE9D007EC3D4 /* ViewController.swift */,
-				D0C5B84F2610DE9D007EC3D4 /* Main.storyboard */,
-				D0C5B87D2610FC1A007EC3D4 /* MapViewController.swift */,
-				D0C5B8812611288B007EC3D4 /* PlaceAnnotation.swift */,
-				D0C5B87B2610E1EC007EC3D4 /* PlacesFinderViewController.swift */,
-				D0C5B87F26110284007EC3D4 /* Place.swift */,
+				D0C5B883261362C0007EC3D4 /* Storyboard */,
+				D0C5B884261362E8007EC3D4 /* Controller */,
+				D0C5B88526136306007EC3D4 /* Model */,
 				D0C5B8522610DEA1007EC3D4 /* Assets.xcassets */,
-				D0C5B8542610DEA1007EC3D4 /* LaunchScreen.storyboard */,
 				D0C5B8572610DEA1007EC3D4 /* Info.plist */,
-				D0C5B8792610E144007EC3D4 /* PlacesTableViewController.swift */,
 			);
 			path = QueroConhecer;
 			sourceTree = "<group>";
@@ -141,6 +134,34 @@
 				D0C5B86D2610DEA1007EC3D4 /* Info.plist */,
 			);
 			path = QueroConhecerUITests;
+			sourceTree = "<group>";
+		};
+		D0C5B883261362C0007EC3D4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5B84F2610DE9D007EC3D4 /* Main.storyboard */,
+				D0C5B8542610DEA1007EC3D4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D0C5B884261362E8007EC3D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5B87D2610FC1A007EC3D4 /* MapViewController.swift */,
+				D0C5B87B2610E1EC007EC3D4 /* PlacesFinderViewController.swift */,
+				D0C5B8792610E144007EC3D4 /* PlacesTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0C5B88526136306007EC3D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5B8812611288B007EC3D4 /* PlaceAnnotation.swift */,
+				D0C5B87F26110284007EC3D4 /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C5B8822611288B007EC3D4 /* PlaceAnnotation.swift in Sources */,
-				D0C5B84E2610DE9D007EC3D4 /* ViewController.swift in Sources */,
 				D0C5B87E2610FC1A007EC3D4 /* MapViewController.swift in Sources */,
 				D0C5B87A2610E144007EC3D4 /* PlacesTableViewController.swift in Sources */,
 				D0C5B87C2610E1EC007EC3D4 /* PlacesFinderViewController.swift in Sources */,
